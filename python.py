@@ -1,0 +1,2 @@
+print("pythonを楽しもう")
+
