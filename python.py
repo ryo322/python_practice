@@ -1,8 +1,15 @@
-num = 20
-print("num:", num)
+print("整数：", 1234)
+print("浮動小数点数：", 1.234)
+print("文字列：", 'python')
+print("真偽値：", True)
 
-num = num + 10
-print("num:", num)
+print("int(3.14)：", int(3.14))
+print("float(10)：", float(10))
+print("str(True)：", str(True))
+print("bool(1):", bool(1))
+print("bool(0.0)：", bool(0.0))
 
-#変数のルール
-#英小文字で単語の区切りに_を使う。一文字目に数字は使えない。キーワードは使えない
+#整数　        int：桁数に制限なし
+#浮動小数点数　 float：６４ビットで表現
+#文字列　      str："~"でも'~'でも良い
+#真偽値　      bool：真（true)と偽（false)のみ
