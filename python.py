@@ -1,15 +1,20 @@
-print("整数：", 1234)
-print("浮動小数点数：", 1.234)
-print("文字列：", 'python')
-print("真偽値：", True)
+msg = ["勉強は", "大変だけど"]
+print("msg  ->", msg)
 
-print("int(3.14)：", int(3.14))
-print("float(10)：", float(10))
-print("str(True)：", str(True))
-print("bool(1):", bool(1))
-print("bool(0.0)：", bool(0.0))
+msg.append("前に進もう")
+print("append ->", msg)
 
-#整数　        int：桁数に制限なし
-#浮動小数点数　 float：６４ビットで表現
-#文字列　      str："~"でも'~'でも良い
-#真偽値　      bool：真（true)と偽（false)のみ
+msg.remove("大変だけど")
+print("remove ->", msg)
+
+msg.insert(1,"楽しい")
+print("insert ->", msg)
+
+msg.clear()
+print("clear ->", msg)
+
+#メソッド：特定の方で使える関数
+#append(値)：追加　　例）score.append(85)
+#insert(添字、値)：挿入　　例）score.insert(2,90)
+#remove(値)：削除　　例）score.remove(75)
+#clear()：全削除　　例）score.clear()
