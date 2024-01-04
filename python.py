@@ -1,30 +1,15 @@
-s1 = input("aの値を入力してください＞")
-s2 = input("bの値を入力してください＞")
+price_str = input("税抜き金額を入力してください")
+rate = 0.10
+price = int(price_str)
 
-print("s1 + s2 =", (s1 + s2))
+if price >= 5000:
+    discount = 500
+elif price >= 3000:
+    discount = 300
+else:
+    discount = 0
 
-a = int(s1)
-b = int(s2)
+amount = int((price - discount) * (1 + rate))
 
-print("a=", a, ",b =", b)
-print("a + b =", (a + b))
-print("a - b =", (a - b))
-print("a * b =", (a * b))
-print("a ** b =", (a ** b))
-print("a / b =", (a / b))
-print("a // b =", (a // b))
-print("a % b =", (a % b))
-
-print("a >= 0 :", (a >= 0))
-print("(a >= 0) and (b >= 0) :", (a >= 0) and (b >= 0))
-
-
-#**は累乗で*は掛け算なので注意が必要
-#//は整数で計算を切り上げる。/は小数点まで計算
-
-#論理演算子
-#and 論理積
-#not 否定
-#or  論理和
-
-#input(文字列)：文字列を表示して入力された文字列を受け取る関数
+print("値引金額：", discount, "円")
+print("税込金額：", amount, "円")
