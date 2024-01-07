@@ -1,29 +1,34 @@
-def usage():
-    print("英語と数学の平均点を計算")
-    print("0~100の数値を入力してください")
+import time
+import random
 
-def display(e, m):
-    print("英語は", e, "点")
-    print("数学は", m, "点")
+colors = ["黄色", "黄緑", "緑", "水色", "青", "紫", "赤"]
 
-def get_avg(e, m):
-    a = (e + m) / 2
-    return a
+print("あなたの運勢は")
+for i in range(3):
+    print("　　.")
+    time.sleep(1) #処理に１秒かける
 
-usage()
+fn1 = random.random()
+if fn1 >= 0.7:
+    print("大吉")
+elif fn1 >= 0.4:
+    print("中吉")
+elif fn1 >= 0.1:
+    print("小吉")
+else :
+    print("凶")
 
-eng = int(input("英語の点数を入力　ー＞"))
-math = int(input("数学の点数を入力　ー＞"))
+fn2 = random.randint(0, 6)
+print("ラッキーカラーは", colors[fn2])
 
-display(eng, math)
+print("fn1:", fn1)
+print("fn2:", fn2)
 
-avg = get_avg(eng, math)
-print("平均は", avg, "点")
+#ライブラリ：よく使う処理を利用しやすくまとめたもの
+#モジュール：プログラムの部品（＝ファイル）
+#パッケージ：モジュールの集まり
 
-#組み込み関数：提供されている関数
-#ユーザー定義関数：自分で作る関数
-
-#関数の作り方
-#def　関数名　（引数, ・・・）
-#引数：呼び出し元から受け取る値
-#戻り値：関数の処理の後に呼び出し（もとに返す値はreturn文で指定、指定しない場合はNoneが返る）
+#手順
+#①インストール：pip install ライブラリ名
+#②プログラムでインポートして読み込む：import モジュール名(as 別名),import パッケージ名.•••.モジュール名
+#③ライブラリの機能を呼び出す：モジュール名.変数名、モジュール名.関数名(引数,・・・)
