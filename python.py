@@ -1,27 +1,29 @@
-num = [0, 1, 2, 3]
-for i in num:
-    print("i =", i)
+def usage():
+    print("英語と数学の平均点を計算")
+    print("0~100の数値を入力してください")
 
-for j in range(3):
-    print("j =", j)
+def display(e, m):
+    print("英語は", e, "点")
+    print("数学は", m, "点")
 
-k = 0
-while k < 3:
-    print("k =", k)
-    k = k + 1
+def get_avg(e, m):
+    a = (e + m) / 2
+    return a
 
-sub_name = ["英語", "数学", "国語"]
-score = [90, 85, 80]
-sum_score = 0
+usage()
 
-for i in range(3):
-    print(sub_name[i], ":", score[i], "点")
-    sum_score = sum_score + score[i]
+eng = int(input("英語の点数を入力　ー＞"))
+math = int(input("数学の点数を入力　ー＞"))
 
-avg = sum_score / 3
+display(eng, math)
 
-print("合計：", sum_score, "点")
-print("平均：", avg, "点")
+avg = get_avg(eng, math)
+print("平均は", avg, "点")
 
-#range(終了値)：０から（終了値−１）までのイテラブルを得る関数
-#イテラブル：反復可能な複数のデータに集まり
+#組み込み関数：提供されている関数
+#ユーザー定義関数：自分で作る関数
+
+#関数の作り方
+#def　関数名　（引数, ・・・）
+#引数：呼び出し元から受け取る値
+#戻り値：関数の処理の後に呼び出し（もとに返す値はreturn文で指定、指定しない場合はNoneが返る）
