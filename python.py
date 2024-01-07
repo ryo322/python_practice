@@ -1,34 +1,17 @@
-import time
-import random
+import requests
+import json
 
-colors = ["黄色", "黄緑", "緑", "水色", "青", "紫", "赤"]
+zip = input("郵便番号を入力　ー＞")
 
-print("あなたの運勢は")
-for i in range(3):
-    print("　　.")
-    time.sleep(1) #処理に１秒かける
+url = "https://zipcloud.ibsnet.co.jp/api/search"
+param = {"zipcode": zip}
 
-fn1 = random.random()
-if fn1 >= 0.7:
-    print("大吉")
-elif fn1 >= 0.4:
-    print("中吉")
-elif fn1 >= 0.1:
-    print("小吉")
-else :
-    print("凶")
+res = requests.get(url, param)
 
-fn2 = random.randint(0, 6)
-print("ラッキーカラーは", colors[fn2])
+data = json.loads(res.text)
+print(data["results"][0]["address1"], ¥ #¥はプログラム内で改行する記述
+      data["results"][1]["address2"], ¥
+      data["results"][2]["address3"])
 
-print("fn1:", fn1)
-print("fn2:", fn2)
-
-#ライブラリ：よく使う処理を利用しやすくまとめたもの
-#モジュール：プログラムの部品（＝ファイル）
-#パッケージ：モジュールの集まり
-
-#手順
-#①インストール：pip install ライブラリ名
-#②プログラムでインポートして読み込む：import モジュール名(as 別名),import パッケージ名.•••.モジュール名
-#③ライブラリの機能を呼び出す：モジュール名.変数名、モジュール名.関数名(引数,・・・)
+#API ＝　プログラムの機能を外部から使う仕組み
+#Web上で使えるAPIをWebAPIという
