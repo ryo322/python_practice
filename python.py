@@ -1,17 +1,18 @@
-import requests
-import json
+import random
 
-zip = input("郵便番号を入力　ー＞")
+coin = 0
+min_coin = 0
 
-url = "https://zipcloud.ibsnet.co.jp/api/search"
-param = {"zipcode": zip}
+for i in range(1, 51):
+    rn = random.random()
+    if rn < 0.5:
+        pay = "200円"
+        coin = coin + 2
+    else:
+        pay = "500円"
+        coin = coin - 3
+    print(i, "人目：", pay, ":100円玉は", coin, "枚")
+    if coin < min_coin:
+        min_coin = coin
 
-res = requests.get(url, param)
-
-data = json.loads(res.text)
-print(data["results"][0]["address1"], ¥ #¥はプログラム内で改行する記述
-      data["results"][1]["address2"], ¥
-      data["results"][2]["address3"])
-
-#API ＝　プログラムの機能を外部から使う仕組み
-#Web上で使えるAPIをWebAPIという
+print("最大不足枚数は", abs(min_coin), "枚") #absは絶対値を返す組み込み関数
