@@ -1,18 +1,17 @@
 import random
 
-coin = 0
-min_coin = 0
+arrival = start = end = 0
+service = 30
+wait = []
 
-for i in range(1, 51):
-    rn = random.random()
-    if rn < 0.5:
-        pay = "200円"
-        coin = coin + 2
+print("◯人目：　到着　待ち　開始　終了")
+
+for i in range(100):
+    arrival = arrival + random.randint(1, 100)
+    if end <= arrival:
+        start = arrival
     else:
-        pay = "500円"
-        coin = coin - 3
-    print(i, "人目：", pay, ":100円玉は", coin, "枚")
-    if coin < min_coin:
-        min_coin = coin
-
-print("最大不足枚数は", abs(min_coin), "枚") #absは絶対値を返す組み込み関数
+        start = end
+    end = start + service
+    wait.append(start - arrival)
+    print((i+1), "人目", arrival, wait[i], start, end)
