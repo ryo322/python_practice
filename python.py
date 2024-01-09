@@ -1,3 +1,2 @@
-print("10進数=%d, 16進数=%x, 10進不動小数点=%f" %(16, 16, 16))
-
-
+print('hello'.upper()) #大文字化
+print('WORLD'.lower()) #小文字化
