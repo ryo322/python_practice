@@ -1,17 +1,8 @@
-import random
+name = '田中'
+place = '東京'
 
-arrival = start = end = 0
-service = 30
-wait = []
+plofile = '私は{}です。出身は{}です'.format(name, place)
+plofile2 = f'私は{name}です。出身は{place}です'
 
-print("◯人目：　到着　待ち　開始　終了")
-
-for i in range(100):
-    arrival = arrival + random.randint(1, 100)
-    if end <= arrival:
-        start = arrival
-    else:
-        start = end
-    end = start + service
-    wait.append(start - arrival)
-    print((i+1), "人目", arrival, wait[i], start, end)
+print(plofile)
+print(plofile2)
