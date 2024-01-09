@@ -1,3 +1,2 @@
-message = ('　ここのケーキは美味しい　')
-print(message)
-print(message.strip()) #空白を除去する.strip()
+message = '今日は晴れ'
+print(message.replace('晴れ', '雨')) #文字列の置換は.replace(oo, oo)
