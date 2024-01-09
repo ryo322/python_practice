@@ -1,2 +1,3 @@
-print('hello'.upper()) #大文字化
-print('WORLD'.lower()) #小文字化
+message = ('　ここのケーキは美味しい　')
+print(message)
+print(message.strip()) #空白を除去する.strip()
