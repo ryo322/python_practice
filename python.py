@@ -1,8 +1,5 @@
-x = 1
-print(str(x))
+a, b = 'sba', 'gasba'
+print(a in b)
 
-y = [1, 2, 3]
-print(str(y))
-
-z = dict(name='john', birth='us')
-print(str(z))
+c, d = 'xdh', 'orweit'
+print(c in d)
