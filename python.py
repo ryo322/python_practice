@@ -1,2 +1,2 @@
-message = '今日は晴れ'
-print(message.replace('晴れ', '雨')) #文字列の置換は.replace(oo, oo)
+message = '今日はとても夜空が綺麗だ'
+print(message.find('夜空'))
