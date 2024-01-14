@@ -1,5 +1,9 @@
-a, b = 'sba', 'gasba'
-print(a in b)
+numbers = [0, 3, 8, -4, 9, 1]
 
-c, d = 'xdh', 'orweit'
-print(c in d)
+print(numbers[1])
+
+print(numbers[-1])
+
+numbers.append(3)
+
+print(numbers)
