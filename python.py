@@ -7,3 +7,9 @@ print(numbers)
 numbers.insert(-1, 4)
 
 print(numbers)
+
+numbers.remove(5) #値を削除する場合はremove
+
+print(numbers)
+
+numbers.pop(-3) #場所を指定して削除する場合はpop
