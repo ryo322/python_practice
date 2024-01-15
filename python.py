@@ -8,8 +8,11 @@ dictionary = {
 
 print(dictionary)
 
-dictionary.pop('A') #要素の削除は.pop(削除する項目)
-print(dictionary)
+print(dictionary.keys())
 
-dictionary.clear() #.clear()はすべての要素を削除
-print(dictionary)
+print(dictionary.values())
+
+print('男性' in dictionary.values())
+
+for key, value in dictionary.items():
+    print(f'キーは{key}, バリューは{value}')
