@@ -1,9 +1,7 @@
-dictionary = {
-    'A' : '田中',
-    'B' : '佐藤',
-    'C' : '男性',
-    'D' : '東京',
-    'E' : '海外旅行',
-}
-
-print(dictionary.get('E'))
+num = -1
+if num > 0:
+    print('正の値です')
+elif num == 0:
+    print('０です')
+else:
+    print('負の値です')
