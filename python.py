@@ -6,13 +6,4 @@ dictionary = {
     'E' : '海外旅行',
 }
 
-print(dictionary)
-
-print(dictionary.keys())
-
-print(dictionary.values())
-
-print('男性' in dictionary.values())
-
-for key, value in dictionary.items():
-    print(f'キーは{key}, バリューは{value}')
+print(dictionary.get('E'))
