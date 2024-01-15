@@ -1,3 +1,7 @@
 numbers = [0, 3, 8, -4, 9, 1]
 
-print(numbers.index(-4))
+numbers.sort()
+print(numbers)
+
+numbers.sort(reverse=True)
+print(numbers)
