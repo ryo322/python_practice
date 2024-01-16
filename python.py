@@ -1,5 +1,5 @@
-names = ['john', 'kevin', 'louis']
+for i in range(10):
+    print(i)
 
-for name in names:
-    print(name)
-    
+for i in range(10, 20):
+    print(i)
