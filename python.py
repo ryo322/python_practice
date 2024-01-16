@@ -1,7 +1,6 @@
 for i in range(10):
-    if i == 6:
-        print('終了')
-        break
+    if i == 3:
+        continue
     print(i)
 
 
