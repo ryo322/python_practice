@@ -1,9 +1,6 @@
-nums = []
+num = 0
+try:
+    print(f'計算結果： {10/num}')
+except:
+    print('エラー')
 
-for i in range(5):
-    nums.append(2 * i)
-
-print(nums)
-
-numbers = [3*i for i in range(5)]
-print(numbers)
