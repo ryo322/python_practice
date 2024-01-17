@@ -1,5 +1,9 @@
-lasts = ['加藤', '佐藤', '田中']
+nums = []
 
-for i, last in enumerate(lasts):
-    print(f'{i}番目の{last}です。')
+for i in range(5):
+    nums.append(2 * i)
 
+print(nums)
+
+numbers = [3*i for i in range(5)]
+print(numbers)
