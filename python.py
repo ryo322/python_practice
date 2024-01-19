@@ -1,17 +1,8 @@
-class Person:
-    nationality = 'Japan'
+class Kid(Person):
+    def say_hello(self, age):
+        print(f'私の名前は{self.name}です。年齢は{age}です。')
 
-    def __init__(self, name):
-        self.name = name
+Kid = Kid('たろう')
+Kid.name
 
-    def say_hello(self):
-        print(f'こんにちは、私の国籍は{self.nationality}です')
-
-    def say_my_name(self):
-        print(f'私の名前は{self.name}です。')
-
-A = Person('田中')
-A.nationality
-A.name
-
-print(A.say_my_name())
+print(Kid.say_hello(12))
