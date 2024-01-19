@@ -5,7 +5,7 @@ def divide(a, b):
         print(e)
     except TypeError as e:
         print(e)
-    else:
-        print('正常に終了しました。')
+    finally:
+        print('すべての処理が正常に終了しました。')
 
 print(divide(10, 5))
