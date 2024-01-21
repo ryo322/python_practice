@@ -1,9 +1,6 @@
-file = open('sample.txt')
-text = file.read()
-file.close()
+import json
+with open('sample.json', 'r') as f:
+    data = json.load(f)
 
-print(text)
-
-with open('sample.txt', 'r') as f:
-    text = f.read()
-print(text)
+data['store_name']
+'大阪'
