@@ -1,6 +1,4 @@
-import json
-with open('sample.json', 'r') as f:
-    data = json.load(f)
-
-data['store_name']
-'大阪'
+import os
+for curDir, dirs, files in os.walk('.'):
+    for file in files:
+        print(f'{curDir}/{file}')
