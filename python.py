@@ -1,1 +1,1 @@
-os.path.abspath('./練習.python')
+os.path.basename('./練習.python')
