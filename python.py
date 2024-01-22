@@ -1,3 +1,1 @@
-lists = os.listdir('.')
-lists.sort()
-print(lists)
+os.path.abspath('./練習.python')
